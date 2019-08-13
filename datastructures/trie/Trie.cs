@@ -117,6 +117,13 @@ namespace datastructures.trie
             }
 
             var node = Prefix(s).FindChildNode('$');
+
+            while (node.IsLeaf())
+            {
+                var parent = node.Parent;
+                parent.DeleteChild(node.Val);
+                node = parent;
+            }
         }
     }
 
