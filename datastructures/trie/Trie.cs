@@ -4,18 +4,23 @@ namespace datastructures.trie
 {
     public class TrieNode
     {
-        public string Val { get; }
-        public List<TrieNode> Children { get; set; } = new List<TrieNode>();
-
-        public bool CompletesString { get; set;}
-        public TrieNode (string val)
+        public char Val { get; private set; }
+        public List<TrieNode> Children { get; set; }
+        public TrieNode Parent { get; private set; }
+        public int Depth { get; private set; }
+        
+        public TrieNode (char val, int depth, TrieNode parent)
         {
             Val = val;
+            Depth = depth;
+            Parent = parent;
         }
     }
     public class Trie
     {
-        public TrieNode root = new TrieNode(string.Empty);
+        public TrieNode root = new TrieNode('^');
+
+        
     }
 
 }
