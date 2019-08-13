@@ -19,7 +19,7 @@ namespace datastructures.trie
     }
     public class Trie
     {
-        public TrieNode root = new TrieNode('^');
+        public TrieNode root = new TrieNode('^', 0, null);
 
 
     }
