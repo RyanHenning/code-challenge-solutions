@@ -14,13 +14,14 @@ namespace datastructures.trie
             Val = val;
             Depth = depth;
             Parent = parent;
+            Children = new List<TrieNode>();
         }
     }
     public class Trie
     {
         public TrieNode root = new TrieNode('^');
 
-        
+
     }
 
 }
