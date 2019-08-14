@@ -1,13 +1,13 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
+public class TreeNode 
+{
+     public int val;
+     public TreeNode left;
+     public TreeNode right;
+     public TreeNode(int x) { val = x; }
+ }
+
+public class Solution 
+{
     
     public int MaxDepth(TreeNode root) {
         
@@ -21,7 +21,7 @@ public class Solution {
             return 0;
         }
         
-        return Max(Traverse(currentNode.left, currentDepth),                   Traverse(currentNode.right, currentDepth)) + 1;
+        return Max(Traverse(currentNode.left, currentDepth), Traverse(currentNode.right, currentDepth)) + 1;
         
     }
     
