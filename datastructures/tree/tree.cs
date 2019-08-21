@@ -1,20 +1,27 @@
 namespace datastructures.tree
 {
+    using System.Collections.Generic;
+
     public class tree
     {
+        
         public Node root = new Node();
 
-        public Node Traverse(Node current)
+        public string Traverse(Node current)
         {
+            string downTreeSuffix = string.Empty;
+
             if (current == null)
             {
-                return;
+                return string.Empty;
             }
 
             foreach(Node child in current.children)
             {
-                Traverse(child);
+                downTreeSuffix += Traverse(child);
             }
+
+            return $"{current.val}{downTreeSuffix}";
         }
     }
 
